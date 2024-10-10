@@ -1,16 +1,19 @@
 import { useContext, createContext, useState } from "react";
 import icons from "../assets/icons";
 import { Link } from "react-router-dom";
+import { useAuth } from "../context/AuthContext"; 
+import logo from "../assets/logo.png"
 const SidebarContext = createContext();
 
 export function Sidebar({ children }) {
+    // const { user, logout } = useAuth();
     const [expanded, setExpanded] = useState(true);
 
     return (
         <aside className="h-screen fixed">
             <nav className="h-full flex flex-col  bg-white border-r shadow-sm">
                 <div className="p-4 pb-2 flex justify-between items-center">
-                    <img src="https://img.logoipsum.com/243.svg" className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} alt="" />
+                    <img src={logo} className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} alt="" />
                     <button onClick={() => setExpanded((curr) => !curr)} className="p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100">
                         <img src={expanded ? icons.backButton : icons.expandButton} alt="user Button" className=" h-10 display: inline-block" />
                     </button>
