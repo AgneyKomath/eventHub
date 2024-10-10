@@ -1,4 +1,3 @@
-// src/Pages/Home.jsx
 import React from "react";
 import icons from "../assets/icons";
 

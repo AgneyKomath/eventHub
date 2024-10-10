@@ -3,12 +3,12 @@ import React from "react";
 function BookedEvent({ image, title, date, location, description }) {
     return (
         <div className="flex sm:flex-row bg-white shadow-md rounded-lg overflow-hidden my-2 mx-2 ml-10">
-            {/* Event Image */}
+            {}
             <div className="w-20% ">
                 <img src={image} alt={title} className="w-20% h-full  " />
             </div>
 
-            {/* Event Details */}
+            {}
             <div className="flex-1 p-4 flex flex-col justify-between">
                 <h3 className="text-lg sm:text-xl font-semibold">{title}</h3>
                 <p className="text-gray-600 text-sm">{date}</p>

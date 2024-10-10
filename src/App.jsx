@@ -2,10 +2,11 @@ import { Route, Routes } from "react-router-dom";
 
 import SideBarMain from "./components/SidebarMenu";
 import Home from "./Pages/Home";
-import Events from "./Pages/Events";
+import Events from "./Pages/events";
 import Bookings from "./Pages/bookings";
 import WishList from "./Pages/WishList";
-import Settings from "./Pages/Settings";
+import Settings from "./Pages/settings";
+import EventPage from './Pages/EventPage';
 
 import "./index.css";
 
@@ -25,6 +26,9 @@ export default function App() {
                     <Route path="/bookings" element={<Bookings />} />
                     <Route path="/wishlist" element={<WishList />} />
                     <Route path="/settings" element={<Settings />} />
+                    <Route path="/events/:eventId" element={<EventPage />} />  {/* Event page based on eventId */}
+
+                    
                 </Routes>
             </div>
         </div>
