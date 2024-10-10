@@ -1,6 +1,7 @@
 // src/Pages/Home.jsx
 import React from "react";
 import icons from "../assets/icons";
+import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
@@ -13,7 +14,9 @@ export default function Home() {
                     party, we've got you covered.
                 </p>
                 <button className="bg-white text-purple-600 font-semibold text-lg px-8 py-3 rounded-full shadow-md hover:bg-gray-200 transition duration-300">
-                    Explore Events
+                    <Link to="/events" className="flex items-center w-full">
+                        Explore Events
+                    </Link>
                 </button>
             </section>
 
@@ -40,21 +43,21 @@ export default function Home() {
                 <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Upcoming Events</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <EventCard
-                        image="https://via.placeholder.com/150"
+                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9g3Gpb_POQZ4QW_ySoO6POL8fcGWN_yiu_w&s"
                         title="Garba Eve '24"
                         date="October 3, 2024"
                         location="Gargi Plaza"
                         description="Join us for an electrifying Garba eve night"
                     />
                     <EventCard
-                        image="https://via.placeholder.com/150"
+                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQItH1ytWMLRi8mqbB6H2kdlu1sRLY_yDzhgg&s"
                         title="Symphony"
                         date="November 10, 2024"
                         location="Somaiya Grounds"
                         description="Experience an amazing cultural festival filled with exciting events"
                     />
                     <EventCard
-                        image="https://via.placeholder.com/150"
+                        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnNUWICpemOvbUOPkY4TAUVX6pP_SGFQzreA&s"
                         title="Abhiyantriki"
                         date="December 1, 2024"
                         location="Gargi Plaza, Somaiya"

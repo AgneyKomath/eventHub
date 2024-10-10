@@ -5,7 +5,7 @@ function BookedEvent({ image, title, date, location, description }) {
         <div className="flex sm:flex-row bg-white shadow-md rounded-lg overflow-hidden my-2 mx-2 ml-10">
             {/* Event Image */}
             <div className="w-20% ">
-                <img src={image} alt={title} className="w-20% h-full  " />
+                <img src={image} alt={title} className="w-20% h-36  " />
             </div>
 
             {/* Event Details */}
@@ -22,21 +22,21 @@ function BookedEvent({ image, title, date, location, description }) {
 export default function bookings() {
     const bookedEvents = [
         {
-            image: "https://via.placeholder.com/150",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9g3Gpb_POQZ4QW_ySoO6POL8fcGWN_yiu_w&s",
             title: "Garba Eve '24",
-            date: "October 3, 2024",
+            date: "October 4, 2024",
             location: "Gargi Plaza",
             description: "Join us for an electrifying Garba eve night",
         },
         {
-            image: "https://via.placeholder.com/150",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQItH1ytWMLRi8mqbB6H2kdlu1sRLY_yDzhgg&s",
             title: "Symphony",
             date: "November 10, 2024",
             location: "Somaiya Grounds",
             description: "Experience an amazing cultural festival filled with exciting events",
         },
         {
-            image: "https://via.placeholder.com/150",
+            image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnNUWICpemOvbUOPkY4TAUVX6pP_SGFQzreA&s",
             title: "Abhiyantriki",
             date: "December 1, 2024",
             location: "Gargi Plaza, Somaiya",
