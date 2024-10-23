@@ -9,6 +9,7 @@ export default function Settings() {
     const handleLogout = () => {
         logout(); 
         navigate("/login"); 
+        window.location.reload();
     };
 
     return (

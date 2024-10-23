@@ -27,6 +27,13 @@ export default function Events() {
 
         fetchEvents();
         fetchTrendingEvents();
+
+        const intervalId = setInterval(() => {
+            fetchEvents();
+            fetchTrendingEvents();
+        }, 5000); 
+
+        return () => clearInterval(intervalId);
     }, []);
 
     return (

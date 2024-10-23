@@ -13,7 +13,7 @@ export function Sidebar({ children }) {
     }, [isAuthenticated, user]); 
 
     return (
-        <aside className="h-screen fixed">
+        <aside className="h-screen fixed z-10">
             <nav className="h-full flex flex-col  bg-white border-r shadow-sm">
                 <div className="p-4 pb-2 flex justify-between items-center">
                     <img src={logo} className={`overflow-hidden transition-all ${expanded ? "w-32" : "w-0"}`} alt="" />

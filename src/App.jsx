@@ -7,7 +7,7 @@ import SideBarMain from "./components/SidebarMenu";
 import Home from "./Pages/Home";
 import Events from "./Pages/events";
 import Bookings from "./Pages/bookings";
-import WishList from "./Pages/WishList";
+// import WishList from "./Pages/WishList";
 import Settings from "./Pages/Settings";
 import Login from "./Pages/Login";
 import Signup from "./Pages/SignUp";
@@ -61,14 +61,14 @@ export default function App() {
                                 </RequireAuth>
                             }
                         />
-                        <Route
+                        {/* <Route
                             path="/wishlist"
                             element={
                                 <RequireAuth redirectTo="/login">
                                     <WishList />
                                 </RequireAuth>
                             }
-                        />
+                        /> */}
                         <Route
                             path="/settings"
                             element={

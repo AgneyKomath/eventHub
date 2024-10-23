@@ -21,6 +21,7 @@ export default function Login() {
             const { token, user } = response.data;
             login({ token, ...user });
             navigate("/home");
+            window.location.reload();
         } catch (error) {
             console.error("Login error:", error.response?.data); 
             setError(error.response?.data?.message || "Login failed. Please try again.");
