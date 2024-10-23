@@ -1,5 +1,7 @@
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate,useNavigate } from "react-router-dom";
 import { AuthProvider, useAuth } from "./context/AuthContext";
+
+import {useEffect} from "react";
 
 import SideBarMain from "./components/SidebarMenu";
 import Home from "./Pages/Home";
@@ -11,8 +13,11 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/SignUp";
 
 import "./index.css";
+import EventPage from "./Pages/EventPage";
 
 export default function App() {
+
+
     return (
         <div className="flex">
             <div className="mr-5">
@@ -71,6 +76,14 @@ export default function App() {
                             element={
                                 <RequireAuth redirectTo="/login">
                                     <Settings />
+                                </RequireAuth>
+                            }
+                        />
+                        <Route
+                            path="/events/:eventId"
+                            element={
+                                <RequireAuth redirectTo="/login">
+                                    <EventPage />
                                 </RequireAuth>
                             }
                         />

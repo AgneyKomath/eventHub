@@ -1,4 +1,4 @@
-import { useContext, createContext, useState } from "react";
+import { useContext, createContext, useState ,useEffect} from "react";
 import icons from "../assets/icons";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext"; 
@@ -8,6 +8,11 @@ const SidebarContext = createContext();
 export function Sidebar({ children }) {
     // const { user, logout } = useAuth();
     const [expanded, setExpanded] = useState(true);
+    const { isAuthenticated, user, logout } = useAuth();
+
+    useEffect(() => {
+        // This will trigger a re-render when isAuthenticated or user changes
+    }, [isAuthenticated, user]); 
 
     return (
         <aside className="h-screen fixed">
@@ -24,19 +29,27 @@ export function Sidebar({ children }) {
                 </SidebarContext.Provider>
 
                 <div className="border-t flex p-3">
-                    <img src={icons.userProfile} alt="" className="w-10 h-10 rounded-md" />
-                    <div
-                        className={`
+                    {isAuthenticated ? (
+                        <>
+                            <img src={icons.userProfile} alt="" className="w-10 h-10 rounded-md" />
+                            <div
+                                className={`
                             flex justify-between items-center
                             overflow-hidden transition-all ${expanded ? "w-52 ml-3" : "w-0"}
                         `}
-                    >
-                        <div className="leading-4">
-                            <h4 className="font-semibold">Agney Komath</h4>
-                            <span className="text-xs text-gray-600">agney.komath@somaiya.edu</span>
-                        </div>
-                        <img src={icons.dots} alt="user Button" className=" h-10 display: inline-block" />
-                    </div>
+                            >
+                                <div className="leading-4">
+                                    <h4 className="font-semibold">{user?.username}</h4>
+                                    <span className="text-xs text-gray-600">{user?.email}</span>
+                                </div>
+                                <img src={icons.dots} alt="user Button" className=" h-10 display: inline-block" />
+                            </div>
+                        </>
+                    ) : (
+                        <Link to="/login" className="text-indigo-600 hover:underline">
+                            Login
+                        </Link>
+                    )}
                 </div>
             </nav>
         </aside>

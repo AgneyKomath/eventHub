@@ -7,7 +7,7 @@ export default function Login() {
     const [formData, setFormData] = useState({ email: "", password: "" });
     const { login } = useAuth();
     const navigate = useNavigate();
-    const [error, setError] = useState(""); // To handle error messages
+    const [error, setError] = useState("");
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -17,11 +17,13 @@ export default function Login() {
         e.preventDefault();
         try {
             const response = await axios.post("http://localhost:5000/api/auth/login", formData);
-            login(response.data); 
-            navigate("/home"); // Redirect to the home page after successful login
+            console.log("Login response:", response.data); 
+            const { token, user } = response.data;
+            login({ token, ...user });
+            navigate("/home");
         } catch (error) {
-            console.error(error.response.data);
-            setError(error.response?.data?.message || "Login failed. Please try again."); // Set error message for UI
+            console.error("Login error:", error.response?.data); 
+            setError(error.response?.data?.message || "Login failed. Please try again.");
         }
     };
 
