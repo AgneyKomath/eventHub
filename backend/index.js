@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/db"); 
 const cors = require("cors");
 const eventRoutes = require("./routes/events"); 
+const bookingsRoutes = require("./routes/bookings");
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api", eventRoutes); 
+app.use("/api/bookings", bookingsRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server started on http://localhost:${PORT}`));

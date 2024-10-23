@@ -6,12 +6,10 @@ import logo from "../assets/logo.png"
 const SidebarContext = createContext();
 
 export function Sidebar({ children }) {
-    // const { user, logout } = useAuth();
-    const [expanded, setExpanded] = useState(true);
+    const [expanded, setExpanded] = useState(false);
     const { isAuthenticated, user, logout } = useAuth();
 
     useEffect(() => {
-        // This will trigger a re-render when isAuthenticated or user changes
     }, [isAuthenticated, user]); 
 
     return (

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     return (
-        <div className="home flex flex-col items-center min-h-screen bg-gray-100">
+        <div className="home flex flex-col items-center min-h-screen bg-gray-100 ml-10">
             {/* Hero Section */}
             <section className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-10 text-center flex flex-col items-center justify-center">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">Manage Your Events Seamlessly</h1>

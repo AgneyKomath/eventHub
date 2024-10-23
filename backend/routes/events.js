@@ -22,4 +22,27 @@ router.get("/events/trending", async (req, res) => {
     }
 });
 
+router.get("/events/:id", async (req, res) => {
+    try {
+        const eventId = req.params.id; // Fetching the ID from the URL params
+        if (!eventId) {
+            return res.status(400).json({ msg: "Event ID is required" });
+        }
+
+        const event = await Event.findById(eventId); // Fetch event by ID
+        if (!event) {
+            return res.status(404).json({ msg: "Event not found" });
+        }
+
+        res.json(event);
+    } catch (err) {
+        console.error(err.message);
+        if (err.kind === "ObjectId") {
+            return res.status(400).json({ msg: "Invalid Event ID" });
+        }
+        res.status(500).send("Server error");
+    }
+});
+
+
 module.exports = router; 
