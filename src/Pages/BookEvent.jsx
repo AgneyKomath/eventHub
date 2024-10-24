@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function BookEvent() {
 
-    const { id: userId, email, token, username } = JSON.parse(localStorage.getItem("user")) || {};    
+    const { id: userId } = JSON.parse(localStorage.getItem("user")) || {};    
     const { id:eventId } = useParams(); 
 
     const [event, setEvent] = useState({});
@@ -48,7 +48,6 @@ export default function BookEvent() {
         try {
             await axios.post("http://localhost:5000/api/bookings", { userId, eventId });
             setIsBooked(true); 
-            // alert("Booking successful!");
             window.location.reload();
         } catch (error) {
             console.error(error);

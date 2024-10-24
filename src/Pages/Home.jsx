@@ -24,9 +24,9 @@ export default function Home() {
 
 
     return (
-        <div className="home flex flex-col items-center min-h-screen bg-gray-100 px-4 md:px-10 ml-10">
+        <div className="home flex flex-col items-center min-h-screen bg-gray-100 px-4 md:px-10 ml-10 ">
             {/* Hero Section */}
-            <section className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-10 text-center flex flex-col items-center justify-center rounded-b-2xl shadow-lg">
+            <section className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 text-white p-10 text-center flex flex-col items-center justify-center rounded-2xl shadow-lg mt-2 ">
                 <h1 className="text-4xl md:text-6xl font-bold mb-4">Manage Your Events Seamlessly</h1>
                 <p className="text-lg md:text-xl mb-6 max-w-3xl">
                     Discover, book, and organize events effortlessly with our powerful event management app. Whether it's a concert, a conference, or a private

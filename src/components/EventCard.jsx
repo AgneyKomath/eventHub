@@ -5,7 +5,7 @@ function EventCard({ id, image, title, date, location }) {
     return (
         <div
             className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 "
-            style={{  maxWidth: "400px" }}
+            style={{  maxWidth: "300px" }}
         >
             <Link to={`/events/${id}`} className="block">
                 <div className="w-full" style={{ aspectRatio: "1 / 1", maxWidth: "400px" }}>

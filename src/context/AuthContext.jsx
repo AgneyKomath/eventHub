@@ -15,10 +15,10 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const login = (userData) => {
-        console.log("User data on login:", userData); // Debugging line
-        setUser(userData); // Set user data (including token)
+        console.log("User data on login:", userData); 
+        setUser(userData); 
         setIsAuthenticated(true);
-        localStorage.setItem("user", JSON.stringify(userData)); // Save user info in localStorage
+        localStorage.setItem("user", JSON.stringify(userData)); 
     };
 
 
@@ -27,7 +27,6 @@ export const AuthProvider = ({ children }) => {
         setUser(null); // Clear user state
         localStorage.removeItem("user");
     };
-    // const isAuthenticated = !!user; 
 
     return <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>{children}</AuthContext.Provider>;
 };
