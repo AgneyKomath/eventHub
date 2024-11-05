@@ -34,6 +34,7 @@ EventHub is a web and mobile application that allows users to create, manage, an
    ```bash
    git clone https://github.com/yourusername/event-management-app.git
    cd event-management-app
+   
 2. Install frontend dependencies
 
    ```bash
@@ -48,6 +49,7 @@ EventHub is a web and mobile application that allows users to create, manage, an
 4. start the backend server
 
    ```bash
+   cd backend
    node index.js
 
 5. start the frontend application
