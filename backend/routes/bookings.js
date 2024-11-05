@@ -9,8 +9,8 @@ const sendBookingEmail = (userEmail, eventDetails) => {
     const transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "appeventx@gmail.com",
-            pass: "lhovcirrzdibvqyc",
+            user:"USERNAME",
+            pass: "PASSWORD",
         },
     });
 
