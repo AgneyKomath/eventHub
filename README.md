@@ -1,8 +1,36 @@
-# React + Vite
+# EventHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+EventHub is a web and mobile application that allows users to create, manage, and book events easily. Users can sign up, log in, and receive email notifications upon booking events. This project is built using React for the frontend and Node.js with Express for the backend, along with MongoDB for database management.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- User authentication (Sign Up, Login)
+- Create and manage events
+- Book events
+- Email notifications upon booking confirmation
+- View upcoming events
+
+## Tech Stack
+
+- **Frontend**: React
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Email Service**: Nodemailer (Gmail SMTP)
+  
+## Getting Started
+
+### Prerequisites
+
+- Node.js and npm installed on your machine
+- MongoDB installed or a cloud database setup (e.g., MongoDB Atlas)
+- A Gmail account to send emails
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/event-management-app.git
+   cd event-management-app
